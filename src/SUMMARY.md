@@ -10,6 +10,8 @@
         - [Pytorch Index](notes/pytorch_index.md)
     - [Load Kmeans](notes/load_kmeans.md)
     - [Slurm](notes/slurm.md)
+- [Deep Learning Pytorch Convention](deep_learning/index.md)
+    - [Environment and Config](deep_learning/config.md)
 - [Diary](diary.md)
 - [WavSEFLM](wavseflm.md)
 - [Target Speaker Seperation](target/index.md)
