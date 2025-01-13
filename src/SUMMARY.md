@@ -12,6 +12,7 @@
     - [Slurm](notes/slurm.md)
 - [Deep Learning Pytorch Convention](deep_learning/index.md)
     - [Environment and Config](deep_learning/config.md)
+- [Conda](conda.md)
 - [Diary](diary.md)
 - [WavSEFLM](wavseflm.md)
 - [Target Speaker Seperation](target/index.md)
