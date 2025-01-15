@@ -477,6 +477,12 @@ python ... # The command to run
 #SBATCH -p kshdnormal
 srun python test.py
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conda"><a class="header" href="#conda">Conda</a></h1>
+<h2 id="backup-an-environment"><a class="header" href="#backup-an-environment">Backup an environment</a></h2>
+<p>To backup an environment, my solution is to use conda clone to clone the current environment to a environment called <code>environment_backup</code>.</p>
+<p>Sample code:</p>
+<pre><code class="language-shell">conda create --name my_env_backup --clone my_env
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deep-learning-pytorch-convention"><a class="header" href="#deep-learning-pytorch-convention">Deep Learning Pytorch Convention</a></h1>
 <p>This part describes my normal Convention for deep learning using pytorch.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="environment-and-config"><a class="header" href="#environment-and-config">Environment and Config</a></h1>
@@ -510,11 +516,14 @@ print(name.x) # valid
 print(name['x']) # valid
 print(name['y']) # valid
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="conda"><a class="header" href="#conda">Conda</a></h1>
-<h2 id="backup-an-environment"><a class="header" href="#backup-an-environment">Backup an environment</a></h2>
-<p>To backup an environment, my solution is to use conda clone to clone the current environment to a environment called <code>environment_backup</code>.</p>
-<p>Sample code:</p>
-<pre><code class="language-shell">conda create --name my_env_backup --clone my_env
+<div style="break-before: page; page-break-before: always;"></div><h1 id="slurm-1"><a class="header" href="#slurm-1">Slurm</a></h1>
+<p>For most model trainings, I used the slurm system from Kunshan Super Computing. It has gpus with 16GB and 32GB.</p>
+<h2 id="salloc-a-server"><a class="header" href="#salloc-a-server">Salloc a server</a></h2>
+<p>This serves convinient testing.</p>
+<pre><code class="language-shell"># allocate a 16GB server
+salloc -p kshdnormal --ntasks-per-node=4 --cpus-per-task=8 --gres=dcu:4 --j inference_bltang --exclusive
+# allocate a 32GB server
+salloc -p kshdnormal --ntasks-per-node=4 --cpus-per-task=8 --gres=dcu:4 --j inference_bltang --exclusive
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diary"><a class="header" href="#diary">Diary</a></h1>
 <h2 id="2024-june-6"><a class="header" href="#2024-june-6">2024 June 6</a></h2>
